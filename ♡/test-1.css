@@ -1,0 +1,49 @@
+/*class*/
+.text-red{
+  color: palevioletred;
+  /*赤線で囲む*/
+  border: solid 3px plum;
+  font-size: 24px;
+  /*テキストを中央に*/
+  text-align: center;
+  /*文字の背景をピンクに*/
+  background-color: pink;
+}
+.text-blue{
+  color: black;
+  /*文字の感覚を調節*/
+  letter-spacing: 1.3em;
+  /*文字の下に線を引く*/
+  text-decoration: underline;
+  /*文字を真ん中に配置*/
+  text-align: center;
+}
+
+/*idとp要素*/
+h4,#first-heading, .text-blueviolet{
+  color: brown;
+  font-size: 20px;
+  /*文字を真ん中に配置*/
+  text-align: center;
+  /*文字の下に線を引く*/
+  text-decoration: underline;
+
+}
+/*idのみ*/
+#second-paragraph{
+  color: palevioletred;
+  /*行の間隔調節*/
+  text-align: center;
+  /*線の太さ調節*/
+  border: solid 3px plum;
+  /*高さ調節*/
+  height: 45px;
+  /*文字の背景をピンクに*/
+  background-color: pink;
+
+}
+/*google-fontを使用*/
+.google-fonts {
+  font-family:'Zen Maru Gothic', serif;
+  }
+
