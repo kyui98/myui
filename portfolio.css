@@ -50,8 +50,8 @@ header {
   color: #80BA4A;
   transition: .3s;/*0.3秒にする*/
 }
-
-@media only screen and (max-width: 768px) {
+@media screen and (max-width:768px){
+/*@media only screen and (max-width: 768px) {*/
   header .container {
     justify-content: center;
   }
@@ -105,7 +105,8 @@ header {
   margin-bottom: 30px;/*少し上にしたい*/
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width:768px){
+/*@media only screen and (max-width: 768px) {*/
   #hero {
     height: 460px;
   }
@@ -164,7 +165,8 @@ header {
   z-index: -1;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width:768px){
+/*@media only screen and (max-width: 768px) {*/
   #concept h3{
     font-size: 24px;
     line-height: 1.5;
@@ -209,7 +211,8 @@ header {
   margin-bottom: 24px;/*文字との間をあける*/
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width:768px){
+/*@media only screen and (max-width: 768px) {*/
 .column-40 {
   width: 100%;/*縦並びに*/
   margin-bottom: 30px;/*少し下に余白をつける*/
@@ -276,7 +279,8 @@ dl dt:first-child + dd{
   border-top:none;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width:768px){
+/*@media only screen and (max-width: 768px) {*/
   #Company dl {
     font-size: 13px;
   }
@@ -328,7 +332,8 @@ dl dt:first-child + dd{
   border-radius: 20px;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width:768px){
+/*@media only screen and (max-width: 768px) {*/
   .column-a, .column-b, .column-c, .column-d {
     width: 48%;
     height: 140px;
