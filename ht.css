@@ -42,12 +42,18 @@ img {
 .nav ul {
   display: flex;
   margin-bottom: 30px;
+  justify-content: center;
 }
 
 .nav ul li {
   padding-left: 64px;
-  justify-content: center;
 }
+
+@media screen and (max-width: 900px) {
+.nav ul {
+  padding-right: 25px;
+}
+
 
 /*concept*/
 .concept {
