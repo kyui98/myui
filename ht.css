@@ -41,12 +41,12 @@ img {
 
 .nav ul {
   display: flex;
-  justify-content: center;/*若干右に寄っている感じがします・・・*/
   margin-bottom: 30px;
 }
 
 .nav ul li {
   padding-left: 64px;
+  justify-content: center;
 }
 
 /*concept*/
