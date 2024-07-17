@@ -353,6 +353,11 @@ header {
     width: 100%;
     margin-bottom: 30px;
   }
+
+    .section3 .col img {
+    display: none;
+  }
+  
 }
 
 
