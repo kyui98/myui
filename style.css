@@ -76,7 +76,7 @@ header {
   }
 
   .nav ul li {
-    padding-top: 10px; /* 追加: 上に少し余白を追加 */
+    padding-top: 10px;
   }
   .header_menu li { 
     margin: 20px 16px 0;
@@ -85,32 +85,32 @@ header {
 
 /*main*/
 #hero {
-  background-image: url("../img/flower.jpeg");
-  background-position: center;/*上下中央に揃える*/
-  background-size: cover;/*画像を全体に表示*/
+  background-image: url("./pik/flower.jpeg");
+  background-position: center;
+  background-size: cover;
   height: 540px;
-  border-radius: 30px;/*角に丸みを*/
+  border-radius: 30px;
   display: flex;
-  align-items: center;/*文字を中央に*/
-  margin-bottom: 90px;/*次のセクションとの間をあけたい*/
-  overflow: hidden;/*はみ出たところはカット*/
+  align-items: center;
+  margin-bottom: 90px;
+  overflow: hidden;
   filter: sepia(21%);
 }
 
-#hero::before {/*透かし*/
+#hero::before {
   content: '';
-  width: 100%;/*擬似要素の幅*/
+  width: 100%;
   height: 100%;
   background-color: #000000;
-  position: absolute;/*全体に表示*/
+  position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.2;/*20%透明に*/
+  opacity: 0.2;
   z-index: 1
 }
 
 .hero_inner {
-  z-index: 2;/*↑より文字を上に。1<2*/
+  z-index: 2;
   color: #ffffff;
   width: 100%;
   text-align: center;
@@ -125,7 +125,7 @@ header {
 .hero_inner h1 {
   font-size: 32px;
   font-weight: 700;
-  margin-bottom: 30px;/*少し上にしたい*/
+  margin-bottom: 30px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -142,7 +142,7 @@ header {
 
 /*concept*/
 #Concept {
-  margin-bottom: 120px;/*conceptとserviceの間に余白を作る*/
+  margin-bottom: 120px;
 }
 
 .title {
@@ -159,12 +159,12 @@ header {
   margin-bottom: 60px;
 }
 
-.column-2 {/*横並び*/
-  width: 48%;/*右に写真を入れたいために、画面の48%に文字を収める*/
+.column-2 {
+  width: 48%;
 }
 
 .text {
-  line-height: 2;/*行間をあける*/
+  line-height: 2;
 }
 
 .concept-img {
@@ -181,11 +181,11 @@ header {
   font-size: 200px;
   font-weight: 700;
   color: #bc8f8f;
-  opacity: 0.1;/*半透明にする*/
-  position: absolute;/*hedingの親要素であるconceptのsectionタグにposition: relativeが含まれているためここでの記述は不要*/
+  opacity: 0.1;
+  position: absolute;
   top: 0;
-  right: 0;/*右に表示したいい*/
-  transform: translateY(-30%);/*もうすこし上に*/
+  right: 0;
+  transform: translateY(-30%);
   z-index: -1;
 }
 
@@ -203,7 +203,7 @@ header {
   }
   .text {
     font-size: 15px;
-    line-height: 1.7;/*行間をあける*/
+    line-height: 1.7;
   }
   .concept-img {
     margin-top: 30px;
@@ -235,10 +235,10 @@ header {
 }
 
 .column-40 img {
-  border-radius: 20px;/*写真丸める*/
+  border-radius: 20px;
   width: 100%;
-  height: 300px; /* ここで写真の高さを指定します */
-  object-fit: cover; /* 写真を容器に合わせてトリミングします */
+  height: 300px;
+  object-fit: cover; 
 }
 
 .column-40 img:hover {
@@ -256,8 +256,8 @@ header {
 
 @media only screen and (max-width: 900px) {
 .column-40 {
-  width: 100%;/*縦並びに*/
-  margin-bottom: 15px;/*少し下に余白をつける*/
+  width: 100%;
+  margin-bottom: 15px;
   flex-direction: column;
 }
 
@@ -273,7 +273,7 @@ header {
 }
 /*section3*/
 .section3 {
-  padding: 80px 0;/*上下の間隔あける*/
+  padding: 80px 0;
 }
 
 .section3 .container {
