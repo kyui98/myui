@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+  </head>
+
+  <body>
+    <div class="background-container">
+    <div class="center_main">
+      <main>
+        <div class="main_visual">
+          <div class="main_visual_whiteout" id="main_visual_whiteout"></div>
+          <div class="main_visual_images" id="main_visual_images">
+            <img class="fadeout_target_sky fadeout_target" id="fadeout_target_sky" src="img/top_pc.jpg" alt="Main Visual">
+            <img class="fadeout_target_mountain fadeout_target" id="fadeout_target_mountain" src="img/Flower_left.png" alt="Main Visual"><!--最後にズーム-->
+            <img class="fadeout_target_ground fadeout_target" id="fadeout_target_ground" src="img/Flower_right.png" alt="Main Visual"><!--最後にズーム-->
+            <img class="fadeout_target_children fadeout_target" id="fadeout_target_children" src="img/top_sun.png" alt="Main Visual"><!--最後にズーム-->
+            <img class="fadeout_target_tree fadeout_target" id="fadeout_target_tree" src="img/top_bard.png" alt="Main Visual">
+            <img class="fadeout_target_right fadeout_target" id="fadeout_target_right" src="img/Flower_right.png" alt="Main Visual"><!--右にはける-->
+            <img class="fadeout_target_left fadeout_target" id="fadeout_target_left" src="img/Flower_left.png" alt="Main Visual"><!--左にはける-->
+            <img class="fadeout_target_sun fadeout_target" id="fadeout_target_sun" src="img/top_sky.png" alt="Main Visual">
+            <div class="main_visual_text" id="main_visual_text">
+              <p class="main_visual_en hina-mincho-regular">
+                Believe in yourself and keep evolving.
+              </p>
+              <p class="main_visual_ja kiwi-maru-regular">自分を信じ進化を続ける</p>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          const fadeout_target_sun = document.getElementById("fadeout_target_sun");
+          const fadeout_target_right = document.getElementById("fadeout_target_right");
+          const fadeout_target_left = document.getElementById("fadeout_target_left");
+          const fadeout_target_tree = document.getElementById("fadeout_target_tree");
+          const main_visual_images = document.getElementById("main_visual_images");
+          const main_visual_text = document.getElementById("main_visual_text");
+          const fadeout_target_children = document.getElementById("fadeout_target_children");
+          const fadeout_target_ground = document.getElementById("fadeout_target_ground");
+          const fadeout_target_mountain = document.getElementById("fadeout_target_mountain");
+          const main_visual_whiteout = document.getElementById("main_visual_whiteout");
+
+          // スクロール範囲の設定
+          const zoomStart = 1000; // ズームを開始するスクロール位置
+          const zoomEnd = 1400; // ズームが終了するスクロール位置
+          const whiteoutStart = 1200; // 切り替わりを開始するスクロール位置
+          const whiteoutMiddle = 1600; // 切り替わり中間スクロール位置
+          const whiteoutEnd = 2200; // 切り替わりが終了するスクロール位置
+
+          // スクロールに応じて画像をフェードアウト
+          window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            fadeout_target_sun.style.transform = `translate(${scrollPosition / 2}px, ${-scrollPosition / 2}px)`;
+            fadeout_target_tree.style.transform = `translate(0, -${scrollPosition / 1}px) scale(${1 + (scrollPosition * 0.001)})`;
+            main_visual_images.style.opacity = `${3 - (scrollPosition * 0.002)}`;
+            main_visual_text.style.opacity = `${-1.5 + (scrollPosition * 0.004)}`;
+            fadeout_target_right.style.transform = `translate(${scrollPosition / 2}px, ${scrollPosition / 3}px)`;
+            fadeout_target_left.style.transform = `translate(${-scrollPosition / 2}px, ${scrollPosition / 3}px)`;
+
+            if (scrollPosition > zoomStart && scrollPosition < zoomEnd) {
+              const zoomFactor = 1 + ((scrollPosition - zoomStart) / (zoomEnd - zoomStart)) * 0.16; // ズーム倍率
+              fadeout_target_children.style.transform = `scale(${zoomFactor})`;
+              fadeout_target_ground.style.transform = `scale(${zoomFactor})`;
+              fadeout_target_mountain.style.transform = `scale(${zoomFactor})`;
+            }
+            if (scrollPosition <= whiteoutStart) {
+              main_visual_whiteout.style.opacity = '0'; // 一番上では必ず透明
+            } else if (scrollPosition > whiteoutStart && scrollPosition < whiteoutMiddle) {
+              main_visual_whiteout.style.opacity = `${((scrollPosition - whiteoutStart) * 0.003)}`;
+            } else if (scrollPosition >= whiteoutMiddle && scrollPosition < whiteoutEnd) {
+              main_visual_whiteout.style.opacity = `${(1.2 - (scrollPosition - whiteoutMiddle) * 0.003)}`;
+            } else if (scrollPosition >= whiteoutEnd) {
+              main_visual_whiteout.style.opacity = '0'; // 一番下では透明
+            }
+          });
+        </script>
+              <div class="top_content_bg">
+                <section class="top_content_introduction">
+                  <div class="fadein_image_left">
+                    <img class="fadein_target" src="img/wrap_left.png" alt="">
+                  </div>
+                  <p class="introduction_text kiwi-maru-regular fadein_target">
+                    La・Linoは、ハンデを持った方が社会で平等に参加できる環境作りをめざしております。<br>
+                    そのために、様々な支援を通じて共に成長し未来への不安を少しでもなくし、本当の安心を感じていただくために心を込めてサポートします。
+                  </p>
+                  <img class="fadein_target fadein_image_right" src="img/wrap_right.png" alt="">
+        </section>
+
+      </main>
+      <footer>
+        
+      </footer>
+    </div>
+    <img src="img/qr.png" alt="右側の画像" class="background-image">
+
+    </div>
+  </body>
+</html>
