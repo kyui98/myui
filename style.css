@@ -135,6 +135,57 @@ span {
 /*-------------------------------------------
 header
 -------------------------------------------*/
+.common__section {
+  padding: 100px 0;
+  width: 100%;
+}
+
+.common__container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 900px;
+  width: 80%;
+}
+
+.common__title {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+/* GSAP ScrollTriggerエリア */
+.side-scroll__section {
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;/* はみ出た部分を隠しておく */
+}
+
+.side-scroll__itemOuter {
+  position: relative;
+  height: 700px;
+  width: 100%;
+  
+}
+
+.side-scroll__itemInner {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  display: flex;
+  gap: 0 60px;
+}
+
+.side-scroll__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 80px;
+  height: 400px;
+  width: 600px;
+  
+}
 
 /*-------------------------------------------
 footer
@@ -152,7 +203,8 @@ footer
   width: 100%;
   max-width: 600px;
   margin: auto;
-  overflow: hidden;
+  overflow-x: auto; /* 横スクロールを許可 */
+  overflow-y: visible;
   box-sizing: border-box;
   position: relative;
 }
@@ -337,8 +389,6 @@ TOP
   bottom: 0;
   left: 0;
 }
-
-
 
 .top_h2_box {
   position: relative;
